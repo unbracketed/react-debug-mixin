@@ -1,0 +1,98 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'publish', './' ]
+2 info using npm@2.5.1
+3 info using node@v0.12.0
+4 verbose node symlink /usr/bin/node
+5 verbose publish [ './' ]
+6 silly cache add args [ './', null ]
+7 verbose cache add spec ./
+8 silly cache add parsed spec { raw: './',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: './',
+8 silly cache add   spec: '/home/brian/code/react-debug-mixin',
+8 silly cache add   type: 'directory' }
+9 verbose addLocalDirectory /home/brian/.npm/react-debug-mixin/0.1.0/package.tgz not in flight; packing
+10 verbose tar pack [ '/home/brian/.npm/react-debug-mixin/0.1.0/package.tgz',
+10 verbose tar pack   '/home/brian/code/react-debug-mixin' ]
+11 verbose tarball /home/brian/.npm/react-debug-mixin/0.1.0/package.tgz
+12 verbose folder /home/brian/code/react-debug-mixin
+13 info prepublish react-debug-mixin@0.1.0
+14 verbose addLocalTarball adding from inside cache /home/brian/.npm/react-debug-mixin/0.1.0/package.tgz
+15 silly cache afterAdd react-debug-mixin@0.1.0
+16 verbose afterAdd /home/brian/.npm/react-debug-mixin/0.1.0/package/package.json not in flight; writing
+17 verbose afterAdd /home/brian/.npm/react-debug-mixin/0.1.0/package/package.json written
+18 silly publish { name: 'react-debug-mixin',
+18 silly publish   version: '0.1.0',
+18 silly publish   description: 'A React mixin component for logging React component lifecycle methods',
+18 silly publish   main: 'index.js',
+18 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+18 silly publish   repository:
+18 silly publish    { type: 'git',
+18 silly publish      url: 'https://github.com/unbracketed/react-debug-mixin.git' },
+18 silly publish   keywords: [ 'react', 'debug', 'mixin', 'component' ],
+18 silly publish   author: { name: 'Brian Luft' },
+18 silly publish   license: 'MIT',
+18 silly publish   bugs: { url: 'https://github.com/unbracketed/react-debug-mixin/issues' },
+18 silly publish   homepage: 'https://github.com/unbracketed/react-debug-mixin',
+18 silly publish   readme: '[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/feross/standard)\n\n# react-debug-mixin\nA React mixin component for logging React component lifecycle methods\n\n## Example\n\n```\nvar ReactDebugMixin = require(\'react-debug-mixin\')\n\nvar MyComponent = React.createClass({\n\n    mixins: [ReactDebugMixin],\n\n    render: function() {\n      return <div>Check the dev console</div>\n    }\n\n});\n```\n\n### Apply to all components\n\nYou can use [react-mixin-tranformer](https://www.npmjs.com/package/react-mixin-transformer) to apply the debug mixin to all of your components during a build step. Follow the docs to setup your project.\n',
+18 silly publish   readmeFilename: 'README.md',
+18 silly publish   gitHead: '20565fcaeab7f1443b6b7bf7d0519c37c8f6fb7f',
+18 silly publish   _id: 'react-debug-mixin@0.1.0',
+18 silly publish   _shasum: 'd619f513d6412371e0cee02c4878c55021baed4b',
+18 silly publish   _from: '.' }
+19 silly mapToRegistry name react-debug-mixin
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/react-debug-mixin
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading /home/brian/.npm/react-debug-mixin/0.1.0/package.tgz
+25 verbose request uri https://registry.npmjs.org/react-debug-mixin
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 08:59:53
+28 verbose request id 12a86c4cae42eed6
+29 http request PUT https://registry.npmjs.org/react-debug-mixin
+30 http 409 https://registry.npmjs.org/react-debug-mixin
+31 verbose headers { date: 'Thu, 26 Mar 2015 15:59:55 GMT',
+31 verbose headers   server: 'Apache',
+31 verbose headers   'content-type': 'application/json',
+31 verbose headers   'cache-control': 'max-age=60',
+31 verbose headers   'content-length': '17',
+31 verbose headers   'accept-ranges': 'bytes',
+31 verbose headers   via: '1.1 varnish',
+31 verbose headers   'x-served-by': 'cache-sjc3125-SJC',
+31 verbose headers   'x-cache': 'MISS',
+31 verbose headers   'x-cache-hits': '0',
+31 verbose headers   'x-timer': 'S1427385593.738574,VS0,VE1301',
+31 verbose headers   'keep-alive': 'timeout=10, max=50',
+31 verbose headers   connection: 'Keep-Alive' }
+32 verbose request invalidating /home/brian/.npm/registry.npmjs.org/react-debug-mixin on PUT
+33 verbose request uri https://registry.npmjs.org/react-debug-mixin?write=true
+34 verbose request no auth needed
+35 info attempt registry request try #1 at 08:59:55
+36 http request GET https://registry.npmjs.org/react-debug-mixin?write=true
+37 http 200 https://registry.npmjs.org/react-debug-mixin?write=true
+38 verbose stack Error: cannot modify pre-existing version
+38 verbose stack     at conflictError (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/publish.js:184:11)
+38 verbose stack     at CachingRegistryClient.putNext (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/publish.js:147:15)
+38 verbose stack     at /usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/publish.js:129:15
+38 verbose stack     at /usr/lib/node_modules/npm/lib/cache/caching-client.js:52:8
+38 verbose stack     at f (/usr/lib/node_modules/npm/node_modules/once/once.js:17:25)
+38 verbose stack     at /usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:73:16
+38 verbose stack     at f (/usr/lib/node_modules/npm/node_modules/once/once.js:17:25)
+38 verbose stack     at CachingRegistryClient.<anonymous> (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:262:12)
+38 verbose stack     at Request._callback (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:178:14)
+38 verbose stack     at Request.self.callback (/usr/lib/node_modules/npm/node_modules/request/request.js:344:22)
+39 verbose pkgid react-debug-mixin
+40 verbose cwd /home/brian/code/react-debug-mixin
+41 error Linux 3.16.0-33-generic
+42 error argv "/usr/bin/node" "/usr/bin/npm" "publish" "./"
+43 error node v0.12.0
+44 error npm  v2.5.1
+45 error code EPUBLISHCONFLICT
+46 error publish fail Cannot publish over existing version.
+46 error publish fail Update the 'version' field in package.json and try again.
+46 error publish fail
+46 error publish fail To automatically increment version numbers, see:
+46 error publish fail     npm help version
+47 verbose exit [ 1, true ]
